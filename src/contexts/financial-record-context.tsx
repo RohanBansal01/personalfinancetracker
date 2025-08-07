@@ -1,4 +1,3 @@
-import { useUser } from "@clerk/clerk-react";
 import { createContext, useContext, useEffect, useState } from "react";
 
 export interface FinancialRecord {
@@ -28,7 +27,6 @@ export const FinancialRecordsProvider = ({
   children: React.ReactNode;
 }) => {
   const [records, setRecords] = useState<FinancialRecord[]>([]);
-  const { user } = useUser();
 
   const fetchRecords = async () => {
     if (!user) return;
