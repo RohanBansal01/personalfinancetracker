@@ -9,7 +9,7 @@ export interface FinancialRecord {
   category: string;
   paymentMethod: string;
 }
-
+const user="21003bea-0feb-408f-826d-d427768416e9";
 interface FinancialRecordsContextType {
   records: FinancialRecord[];
   addRecord: (record: FinancialRecord) => void;
@@ -46,7 +46,7 @@ export const FinancialRecordsProvider = ({
   }, [user]);
 
   const addRecord = async (record: FinancialRecord) => {
-    const response = await fetch("http://localhost:3001/financial-records", {
+    const response = await fetch("http://localhost:3001/financial-records/", {
       method: "POST",
       body: JSON.stringify(record),
       headers: {

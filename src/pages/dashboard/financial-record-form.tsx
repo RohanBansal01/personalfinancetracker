@@ -8,12 +8,12 @@ export const FinancialRecordForm = () => {
   const [paymentMethod, setPaymentMethod] = useState<string>("");
   const { addRecord } = useFinancialRecords();
 
-
+const user="21003bea-0feb-408f-826d-d427768416e9"
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const newRecord = {
-      userId: user?.id ?? "",
+      userId: user,
       date: new Date(),
       description: description,
       amount: parseFloat(amount),

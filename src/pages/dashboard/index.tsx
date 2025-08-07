@@ -5,7 +5,7 @@ import { useFinancialRecords } from "../../contexts/financial-record-context";
 import { useMemo } from "react";
 export const Dashboard = () => {
   const { records } = useFinancialRecords();
-
+  const user="21003bea-0feb-408f-826d-d427768416e9";
   const totalMonthly = useMemo(() => {
     let totalAmount = 0;
     records.forEach((record) => {
